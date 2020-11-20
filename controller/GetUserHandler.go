@@ -1,12 +1,8 @@
 package controller
 
-import (
-	"fmt"
-	"github.com/gofiber/fiber/v2"
-)
+import "github.com/gofiber/fiber"
 
-
-func GetUserHandler(c * fiber.Ctx) error {
-	fmt.Fprintf(c, "%s", c.Params("search"))
+func GetUserHandler(c *fiber.Ctx) error {
+	c.SendString("Hello")
 	return nil
 }
